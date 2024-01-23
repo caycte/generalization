@@ -5,11 +5,20 @@ This repository contains the code to train convolutional and fully connected net
 FOR DEEP CONVOLUTIONAL NEURAL NETWORKS](https://arxiv.org/pdf/1905.12600.pdf)**  
 
 
+## References:
+
+[1] https://github.com/geifmany/cifar-vgg
+
+[2] https://github.com/chengyangfu/pytorch-vgg-cifar10
+
+[3] https://github.com/bneyshabur/over-parametrization.git
+
+
 ## Usage
 1. Install *Python 3.6* and *PyTorch 0.4.1*.
 2. Clone the repository:
    ```
-   git clone https://github.com/bneyshabur/over-parametrization.git
+   git clone https://github.com/caycte/generalization.git
    ```
 3. As a simple example, the following command trains a VGG-like architecture on *CIFAR10* dataset and then computes several measures/bounds on the learned network:
    ```
