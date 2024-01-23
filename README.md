@@ -13,6 +13,8 @@ FOR DEEP CONVOLUTIONAL NEURAL NETWORKS](https://arxiv.org/pdf/1905.12600.pdf)**
 
 [3] https://github.com/bneyshabur/over-parametrization.git
 
+[4] https://github.com/bneyshabur/generalization-bounds
+
 
 ## Usage
 1. Install *Python 3.6* and *PyTorch 0.4.1*.
