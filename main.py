@@ -127,16 +127,17 @@ def main():
         print(f"Is MPS available? {torch.backends.mps.is_available()}")
 
         # Set the device      
+        use_cuda = torch.backends.mps.is_available()
         device = "mps" if torch.backends.mps.is_available() else "cpu"
     else:
+        use_cuda = not args.no_cuda and torch.cuda.is_available()
         device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
     print(f"Using device: {device}")
 
-    # use_cuda = not args.no_cuda and torch.cuda.is_available()
-    # device = torch.device("cuda" if use_cuda else "cpu")
-    # kwargs = {'num_workers': 1, 'pin_memory': True} if use_cuda else {}
+
+    kwargs = {'num_workers': 1, 'pin_memory': True} if use_cuda else {}
     nchannels, nclasses, img_dim,  = 3, 10, 32
     if args.dataset == 'MNIST': nchannels = 1
     if args.dataset == 'CIFAR100': nclasses = 100
