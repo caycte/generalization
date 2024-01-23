@@ -1,5 +1,27 @@
 import torch.nn as nn
 
+'''
+The given VGG-style architecture is defined by a configuration list (cfg) that specifies the number and size of convolutional layers and when to apply max pooling layers.
+The list cfg specifies layer types and channel dimensions for the convolutional layers. Here's a breakdown:
+
+The numbers represent convolutional layers with the corresponding number of output channels.
+'M' represents a max pooling layer.
+'A' represents another max pooling layer with different kernel size and stride.
+From the cfg list, we can count the layers:
+
+There are 8 convolutional layers (represented by the numbers 64, 128, 256, and 512, each appearing twice).
+There are 3 max pooling layers represented by 'M'.
+There is 1 additional max pooling layer represented by 'A'.
+In addition to these, the self.classifier contains two fully connected layers (represented by nn.Linear(512, 512) and nn.Linear(512, nclasses)), along with batch normalization, a ReLU activation, and dropout.
+
+So in total:
+
+8 convolutional layers
+4 max pooling layers
+2 fully connected layers
+This gives us a total of 14 layers that have learnable parameters (all convolutional and fully connected layers). The pooling layers, batch normalization, ReLU activations, and dropout do not add to the count of layers in terms of depth, as they do not have learnable parameters that affect the depth of the architecture in the same way that convolutional and fully connected layers do.
+'''
+
 class Network(nn.Module):
     def __init__(self, nchannels, nclasses):
         super(Network, self).__init__()
