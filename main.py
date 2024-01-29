@@ -8,6 +8,28 @@ import argparse
 import measures
 from torchvision import transforms, datasets
 
+import json
+
+def update_json_file( new_key, new_value, json_file_path, overwrite=False):
+    # Load existing dictionary from the JSON file
+    
+    with open(json_file_path, 'r') as file:
+        data = json.load(file)
+    
+    if not overwrite:
+        i=1
+        while new_key+str(i) in data:
+            i+=1
+        new_key+=str(i)
+
+    # Update the dictionary with the new key-value pair
+    data[new_key] = new_value
+
+    # Save the updated dictionary back to the JSON file
+    with open(json_file_path, 'w') as file:
+        json.dump(data, file, indent=2, default=str)
+
+
 # train the model for one epoch on the given set
 def train(args, model, device, train_loader, criterion, optimizer, epoch):
     sum_loss, sum_correct = 0, 0
@@ -113,13 +135,13 @@ def main():
     parser.add_argument('--learningrate', default=0.01, type=float,
                         help='learning rate (default: 0.01)')
     parser.add_argument('--momentum', default=0.9, type=float,
-                        help='momentum (default: 0.9)')
+                        help='momentum (default: 0.9)'),
+    parser.add_argument('--isMac', default=False, help = 'Set isMac = True when running on an Apple device')
     args = parser.parse_args()
 
 
-    isMac = True
 
-    if isMac:
+    if args.isMac:
         print(f"PyTorch version: {torch.__version__}")
 
         # Check PyTorch has access to MPS (Metal Performance Shader, Apple's GPU architecture)
@@ -145,6 +167,7 @@ def main():
     # create an initial model
     model = getattr(importlib.import_module('models.{}'.format(args.model)), 'Network')(nchannels, nclasses)
     model = model.to(device)
+    
 
     # create a copy of the initial model to be used later
     init_model = copy.deepcopy(model)
@@ -179,7 +202,8 @@ def main():
             f'Training error: {tr_err:.3f}\t Validation error: {val_err:.3f}\n')
 
     # calcualtes various measures and bounds on the learned network
-    measure_dict, bound_dict = measures.calculate(model, init_model, device, train_loader, tr_margin, nchannels, nclasses, img_dim)
+    input_shape = train_dataset.__getitem__(0)[0].shape
+    measure_dict, bound_dict = measures.calculate(model, init_model, device, train_loader, tr_margin, nchannels, img_dim, input_shape)
 
     print('\n###### Measures')
     for key, value in measure_dict.items():
@@ -188,6 +212,13 @@ def main():
     print('\n###### Generalization Bounds')
     for key, value in bound_dict.items():
         print(f'{key.ljust(45):s}:{float(value):3.3}')
+
+    key = f'{args.dataset}_{args.epochs}epoch_{args.batchsize}batch'
+    new_values ={'dataset':args.dataset,'epoch':args.epochs,'batch':args.batchsize}
+    new_values['measures'] = measure_dict
+    new_values['bounds'] = bound_dict
+
+    update_json_file( args.dataset, new_values, 'results.json', overwrite=False)
 
 if __name__ == '__main__':
     main()

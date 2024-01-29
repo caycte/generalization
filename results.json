@@ -1,0 +1,77 @@
+{
+  "CIFAR101": {
+    "dataset": "CIFAR10",
+    "epoch": 1,
+    "batch": 64,
+    "measures": {
+      "L_{1,inf} norm": -375295349.91511816,
+      "Frobenious norm": -375295349.91511816,
+      "L_{3,1.5} norm": -375295349.91511816,
+      "Spectral norm": -4.646806879633723,
+      "L_1.5 operator norm": -4.646806879633723,
+      "Trace norm": -4.646806879633723,
+      "L1_path norm": -1936976794510.4346,
+      "L1.5_path norm": -589.5155205579596,
+      "L2_path norm": -0.9891032387942745,
+      "operator_norm": 12.767005975656888
+    },
+    "bounds": {
+      "L1_max Bound (Bartlett and Mendelson 2002)": -7126676.695913843,
+      "Frobenious Bound (Neyshabur et al. 2015)": -7126676.695913843,
+      "L_{3,1.5} Bound (Neyshabur et al. 2015)": -43256235.86988366,
+      "Spec_L_{2,1} Bound (Bartlett et al. 2017)": -2312.539561747048,
+      "Spec_Fro Bound (Neyshabur et al. 2018)": -22.080816059572026,
+      "MAXXXXX TESSST": 12.767005975656888
+    }
+  },
+  "CIFAR102": {
+    "dataset": "CIFAR10",
+    "epoch": 1,
+    "batch": 64,
+    "measures": {
+      "L_{1,inf} norm": -344541840.3929725,
+      "Frobenious norm": -344541840.3929725,
+      "L_{3,1.5} norm": -344541840.3929725,
+      "Spectral norm": -4.64561394318678,
+      "L_1.5 operator norm": -4.64561394318678,
+      "Trace norm": -4.64561394318678,
+      "L1_path norm": -1785846974116.1064,
+      "L1.5_path norm": -547.2566631856982,
+      "L2_path norm": -0.9571072681337948,
+      "operator_norm": 12.61055961672094
+    },
+    "bounds": {
+      "L1_max Bound (Bartlett and Mendelson 2002)": -6542682.463961302,
+      "Frobenious Bound (Neyshabur et al. 2015)": -6542682.463961302,
+      "L_{3,1.5} Bound (Neyshabur et al. 2015)": -39711611.45069616,
+      "Spec_L_{2,1} Bound (Bartlett et al. 2017)": -2237.510460205349,
+      "Spec_Fro Bound (Neyshabur et al. 2018)": -21.082358263372445,
+      "MAXXXXX TESSST": 12.61055961672094
+    }
+  },
+  "CIFAR103": {
+    "dataset": "CIFAR10",
+    "epoch": 1,
+    "batch": 64,
+    "measures": {
+      "L_{1,inf} norm": -543044633.7989992,
+      "Frobenious norm": -543044633.7989992,
+      "L_{3,1.5} norm": -543044633.7989992,
+      "Spectral norm": -6.4982452173545,
+      "L_1.5 operator norm": -6.4982452173545,
+      "Trace norm": -6.4982452173545,
+      "L1_path norm": -2825410694168.9487,
+      "L1.5_path norm": -859.9957581843262,
+      "L2_path norm": -0.782728991649525,
+      "operator_norm": 1072.1281936119587,
+      "n_param": "4950720"
+    },
+    "bounds": {
+      "L1_max Bound (Bartlett and Mendelson 2002)": -10312154.247079559,
+      "Frobenious Bound (Neyshabur et al. 2015)": -10312154.247079559,
+      "L_{3,1.5} Bound (Neyshabur et al. 2015)": -62590881.48253618,
+      "Spec_L_{2,1} Bound (Bartlett et al. 2017)": -3610.38680527844,
+      "Spec_Fro Bound (Neyshabur et al. 2018)": -38.138409786533025
+    }
+  }
+}

@@ -5,6 +5,7 @@ import warnings
 import torch.nn as nn
 import pdb
 
+from operator_norm import prep_params, compute_operator_distance
 
 # This function reparametrizes the networks with batch normalization in a way that it calculates the same function as the
 # original network but without batch normalization. Instead of removing batch norm completely, we set the bias and mean
@@ -33,7 +34,7 @@ def reparam(model, prev_layer=None):
 # This function calculates a measure on the given model
 # measure_func is a function that returns a value for a given linear or convolutional layer
 # calc_measure calculates the values on individual layers and then calculate the final value based on the given operator
-def calc_measure(model, init_model, measure_func, operator, kwargs={}, p=1):
+def calc_measure(model, init_model, measure_func, operator,input_shape ,kwargs={}, p=1 ):
     measure_val = 0
     if operator == 'product':
         measure_val = math.exp(calc_measure(model, init_model, measure_func, 'log_product', kwargs, p))
@@ -94,6 +95,16 @@ def n_param(module, init_module):
     bparam = 0 if module.bias is None else module.bias.size(0)
     return bparam + module.weight.size(0) * module.weight.view(module.weight.size(0),-1).size(1)
 
+
+
+
+def compute_singular_values(trained_model,init_model, input_shape):  
+
+    '''
+    compute the singular values using the method presented in https://arxiv.org/pdf/1805.10408.pdf
+    '''
+    return compute_operator_distance(trained_model.state_dict(),init_model.state_dict(), input_shape = input_shape[-2:] )
+
 # This function calculates path-norm introduced in Neyshabur et al. 2015
 def lp_path_norm(model, device, p=2, input_size=[3, 32, 32]):
     tmp_model = copy.deepcopy(model)
@@ -105,11 +116,13 @@ def lp_path_norm(model, device, p=2, input_size=[3, 32, 32]):
     return (tmp_model(data_ones).sum() ** (1 / p )).item()
 
 
+
+
+
 # This function calculates various measures on the given model and returns two dictionaries:
 # 1) measures: different norm based measures on the model
 # 2) bounds: different generalization bounds on the model
-def calculate(trained_model, init_model, device, train_loader, margin, nchannels, nclasses, img_dim):
-
+def calculate(trained_model, init_model, device, train_loader, margin, nchannels, img_dim, input_shape):
     model = copy.deepcopy(trained_model)
     reparam(model)
     reparam(init_model)
@@ -134,6 +147,7 @@ def calculate(trained_model, init_model, device, train_loader, margin, nchannels
         measure['L1_path norm'] = lp_path_norm(model, device, p=1, input_size=[1, nchannels, img_dim, img_dim]) / margin
         measure['L1.5_path norm'] = lp_path_norm(model, device, p=1.5, input_size=[1, nchannels, img_dim, img_dim]) / margin
         measure['L2_path norm'] = lp_path_norm(model, device, p=2, input_size=[1, nchannels, img_dim, img_dim]) / margin
+        measure['operator_norm'], measure['n_param'] = compute_singular_values(trained_model,init_model, input_shape)
 
 
         # Generalization bounds: constants and additive logarithmic factors are not included
@@ -151,5 +165,4 @@ def calculate(trained_model, init_model, device, train_loader, margin, nchannels
 
         ratio = calc_measure(model, init_model, h_dist_op_norm,'norm', {'p':2, 'q':2, 'p_op':float('Inf')}, p=2)
         bound['Spec_Fro Bound (Neyshabur et al. 2018)'] =  d * measure['Spectral norm'] * ratio / math.sqrt(m)
-
     return measure, bound
