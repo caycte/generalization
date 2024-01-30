@@ -27,7 +27,7 @@ class Network(nn.Module):
         super(Network, self).__init__()
         cfg = [64, 64, 'M', 128, 128, 'M', 256, 256, 'M', 512, 512, 'A']
         self.features = make_layers(cfg, nchannels)
-        self.classifier = nn.Sequential( nn.Linear( 512, 512 ), nn.BatchNorm1d(512),
+        self.classifier = nn.Sequential( nn.Linear( 131072, 512 ), nn.BatchNorm1d(512),
                                         nn.ReLU(inplace=True), nn.Dropout(0.5), nn.Linear( 512, nclasses))
 
     def forward(self, x):

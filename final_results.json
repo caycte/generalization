@@ -1,0 +1,17 @@
+{
+  "MNIST-64-1-16.A1": {
+    "correct_train": 47359,
+    "n_sample_train": 59000,
+    "correct_test": 7919,
+    "n_sample_test": 10000,
+    "distance_to_initialization": 2.461167404789208,
+    "n_param": "130428",
+    "cfg": [
+      16,
+      "A"
+    ],
+    "batchsize": 64,
+    "epochs": 1,
+    "dataset_name": "FASHION-MNIST"
+  }
+}
