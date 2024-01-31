@@ -27,5 +27,32 @@
     "batchsize": 64,
     "epochs": 1,
     "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-64-5-16.361": {
+    "train_acc": 0.8982711864406779,
+    "test_acc": 0.8793,
+    "distance_to_initialization": 11.229834761059433,
+    "n_param": "4651452",
+    "cfg": [
+      16,
+      36
+    ],
+    "batchsize": 64,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-64-5-126.126.1261": {
+    "train_acc": 0.9395254237288135,
+    "test_acc": 0.908,
+    "distance_to_initialization": 18.006376284848535,
+    "n_param": "16545186",
+    "cfg": [
+      126,
+      126,
+      126
+    ],
+    "batchsize": 64,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
   }
 }
