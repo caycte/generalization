@@ -13,5 +13,19 @@
     "batchsize": 64,
     "epochs": 1,
     "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-64-1-16.36.A1": {
+    "train_acc": 0.8278813559322034,
+    "test_acc": 0.8163,
+    "distance_to_initialization": 13.136289945732821,
+    "n_param": "296892",
+    "cfg": [
+      16,
+      36,
+      "A"
+    ],
+    "batchsize": 64,
+    "epochs": 1,
+    "dataset_name": "FASHION-MNIST"
   }
 }
