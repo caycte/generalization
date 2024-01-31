@@ -1,50 +1,232 @@
 {
-  "MNIST-64-1-16.A1": {
-    "correct_train": 47359,
-    "n_sample_train": 59000,
-    "correct_test": 7919,
-    "n_sample_test": 10000,
-    "distance_to_initialization": 2.461167404789208,
-    "n_param": "130428",
+  "MNIST-16-5-16.16.321": {
+    "train_acc": 0.8950338983050847,
+    "test_acc": 0.873,
+    "distance_to_initialization": 16.276634762750387,
+    "n_param": "4137084",
     "cfg": [
       16,
-      "A"
+      16,
+      32
     ],
-    "batchsize": 64,
-    "epochs": 1,
+    "batchsize": 16,
+    "epochs": 5,
     "dataset_name": "FASHION-MNIST"
   },
-  "MNIST-64-1-16.36.A1": {
-    "train_acc": 0.8278813559322034,
-    "test_acc": 0.8163,
-    "distance_to_initialization": 13.136289945732821,
-    "n_param": "296892",
+  "MNIST-16-7-16.16.321": {
+    "train_acc": 0.906135593220339,
+    "test_acc": 0.8857,
+    "distance_to_initialization": 17.92671478685434,
+    "n_param": "4137084",
     "cfg": [
       16,
-      36,
-      "A"
+      16,
+      32
     ],
-    "batchsize": 64,
-    "epochs": 1,
+    "batchsize": 16,
+    "epochs": 7,
     "dataset_name": "FASHION-MNIST"
   },
-  "MNIST-64-5-16.361": {
-    "train_acc": 0.8982711864406779,
-    "test_acc": 0.8793,
-    "distance_to_initialization": 11.229834761059433,
-    "n_param": "4651452",
+  "MNIST-32-5-16.16.321": {
+    "train_acc": 0.8947627118644068,
+    "test_acc": 0.8745,
+    "distance_to_initialization": 16.441789144182934,
+    "n_param": "4137084",
     "cfg": [
       16,
-      36
+      16,
+      32
+    ],
+    "batchsize": 32,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-32-7-16.16.321": {
+    "train_acc": 0.9068813559322034,
+    "test_acc": 0.8835,
+    "distance_to_initialization": 18.071368049362704,
+    "n_param": "4137084",
+    "cfg": [
+      16,
+      16,
+      32
+    ],
+    "batchsize": 32,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-64-5-16.16.321": {
+    "train_acc": 0.8935762711864407,
+    "test_acc": 0.8724,
+    "distance_to_initialization": 16.25863087089509,
+    "n_param": "4137084",
+    "cfg": [
+      16,
+      16,
+      32
     ],
     "batchsize": 64,
     "epochs": 5,
     "dataset_name": "FASHION-MNIST"
   },
+  "MNIST-64-7-16.16.321": {
+    "train_acc": 0.9049322033898305,
+    "test_acc": 0.8825,
+    "distance_to_initialization": 17.873725608349197,
+    "n_param": "4137084",
+    "cfg": [
+      16,
+      16,
+      32
+    ],
+    "batchsize": 64,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-16-5-126.126.5121": {
+    "train_acc": 0.947135593220339,
+    "test_acc": 0.9134,
+    "distance_to_initialization": 23.505714469296755,
+    "n_param": "66786174",
+    "cfg": [
+      126,
+      126,
+      512
+    ],
+    "batchsize": 16,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-16-7-126.126.5121": {
+    "train_acc": 0.9653898305084746,
+    "test_acc": 0.9206,
+    "distance_to_initialization": 27.862311919350145,
+    "n_param": "66786174",
+    "cfg": [
+      126,
+      126,
+      512
+    ],
+    "batchsize": 16,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-32-5-126.126.5121": {
+    "train_acc": 0.9466271186440678,
+    "test_acc": 0.9124,
+    "distance_to_initialization": 23.65611700081724,
+    "n_param": "66786174",
+    "cfg": [
+      126,
+      126,
+      512
+    ],
+    "batchsize": 32,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-32-7-126.126.5121": {
+    "train_acc": 0.9637627118644068,
+    "test_acc": 0.9217,
+    "distance_to_initialization": 28.08679110496738,
+    "n_param": "66786174",
+    "cfg": [
+      126,
+      126,
+      512
+    ],
+    "batchsize": 32,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-64-5-126.126.5121": {
+    "train_acc": 0.9487457627118644,
+    "test_acc": 0.911,
+    "distance_to_initialization": 23.3992851649879,
+    "n_param": "66786174",
+    "cfg": [
+      126,
+      126,
+      512
+    ],
+    "batchsize": 64,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-64-7-126.126.5121": {
+    "train_acc": 0.9646949152542373,
+    "test_acc": 0.923,
+    "distance_to_initialization": 28.38752244201995,
+    "n_param": "66786174",
+    "cfg": [
+      126,
+      126,
+      512
+    ],
+    "batchsize": 64,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-16-5-126.126.1261": {
+    "train_acc": 0.9388305084745763,
+    "test_acc": 0.9079,
+    "distance_to_initialization": 18.341952193628714,
+    "n_param": "16545186",
+    "cfg": [
+      126,
+      126,
+      126
+    ],
+    "batchsize": 16,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-16-7-126.126.1261": {
+    "train_acc": 0.9499152542372882,
+    "test_acc": 0.912,
+    "distance_to_initialization": 22.306153062286487,
+    "n_param": "16545186",
+    "cfg": [
+      126,
+      126,
+      126
+    ],
+    "batchsize": 16,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-32-5-126.126.1261": {
+    "train_acc": 0.9393389830508475,
+    "test_acc": 0.9102,
+    "distance_to_initialization": 18.595704521681842,
+    "n_param": "16545186",
+    "cfg": [
+      126,
+      126,
+      126
+    ],
+    "batchsize": 32,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-32-7-126.126.1261": {
+    "train_acc": 0.9530677966101695,
+    "test_acc": 0.9154,
+    "distance_to_initialization": 22.805485854373455,
+    "n_param": "16545186",
+    "cfg": [
+      126,
+      126,
+      126
+    ],
+    "batchsize": 32,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
   "MNIST-64-5-126.126.1261": {
-    "train_acc": 0.9395254237288135,
-    "test_acc": 0.908,
-    "distance_to_initialization": 18.006376284848535,
+    "train_acc": 0.9387966101694916,
+    "test_acc": 0.9082,
+    "distance_to_initialization": 18.35985439150072,
     "n_param": "16545186",
     "cfg": [
       126,
@@ -53,6 +235,356 @@
     ],
     "batchsize": 64,
     "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-64-7-126.126.1261": {
+    "train_acc": 0.9516101694915254,
+    "test_acc": 0.9118,
+    "distance_to_initialization": 22.012616801281794,
+    "n_param": "16545186",
+    "cfg": [
+      126,
+      126,
+      126
+    ],
+    "batchsize": 64,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-16-5-64.64.1261": {
+    "train_acc": 0.9318305084745763,
+    "test_acc": 0.9035,
+    "distance_to_initialization": 20.311978243337034,
+    "n_param": "16368300",
+    "cfg": [
+      64,
+      64,
+      126
+    ],
+    "batchsize": 16,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-16-7-64.64.1261": {
+    "train_acc": 0.9430677966101695,
+    "test_acc": 0.9114,
+    "distance_to_initialization": 24.403778032693264,
+    "n_param": "16368300",
+    "cfg": [
+      64,
+      64,
+      126
+    ],
+    "batchsize": 16,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-32-5-64.64.1261": {
+    "train_acc": 0.9327966101694916,
+    "test_acc": 0.9054,
+    "distance_to_initialization": 19.562684378729323,
+    "n_param": "16368300",
+    "cfg": [
+      64,
+      64,
+      126
+    ],
+    "batchsize": 32,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-32-7-64.64.1261": {
+    "train_acc": 0.9427627118644067,
+    "test_acc": 0.9124,
+    "distance_to_initialization": 24.336325991792656,
+    "n_param": "16368300",
+    "cfg": [
+      64,
+      64,
+      126
+    ],
+    "batchsize": 32,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-64-5-64.64.1261": {
+    "train_acc": 0.9307118644067797,
+    "test_acc": 0.9036,
+    "distance_to_initialization": 20.180353815829697,
+    "n_param": "16368300",
+    "cfg": [
+      64,
+      64,
+      126
+    ],
+    "batchsize": 64,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-64-7-64.64.1261": {
+    "train_acc": 0.9426949152542373,
+    "test_acc": 0.9139,
+    "distance_to_initialization": 23.608237252347504,
+    "n_param": "16368300",
+    "cfg": [
+      64,
+      64,
+      126
+    ],
+    "batchsize": 64,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-16-5-64.64.641": {
+    "train_acc": 0.9258813559322034,
+    "test_acc": 0.9029,
+    "distance_to_initialization": 17.147109790822185,
+    "n_param": "8333100",
+    "cfg": [
+      64,
+      64,
+      64
+    ],
+    "batchsize": 16,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-16-7-64.64.641": {
+    "train_acc": 0.937864406779661,
+    "test_acc": 0.9069,
+    "distance_to_initialization": 21.313766330696545,
+    "n_param": "8333100",
+    "cfg": [
+      64,
+      64,
+      64
+    ],
+    "batchsize": 16,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-32-5-64.64.641": {
+    "train_acc": 0.9249322033898305,
+    "test_acc": 0.9022,
+    "distance_to_initialization": 17.45755583574602,
+    "n_param": "8333100",
+    "cfg": [
+      64,
+      64,
+      64
+    ],
+    "batchsize": 32,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-32-7-64.64.641": {
+    "train_acc": 0.9372881355932203,
+    "test_acc": 0.907,
+    "distance_to_initialization": 21.537523911643124,
+    "n_param": "8333100",
+    "cfg": [
+      64,
+      64,
+      64
+    ],
+    "batchsize": 32,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-64-5-64.64.641": {
+    "train_acc": 0.925864406779661,
+    "test_acc": 0.9027,
+    "distance_to_initialization": 17.659052151803255,
+    "n_param": "8333100",
+    "cfg": [
+      64,
+      64,
+      64
+    ],
+    "batchsize": 64,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-64-7-64.64.641": {
+    "train_acc": 0.9375254237288135,
+    "test_acc": 0.9057,
+    "distance_to_initialization": 22.074117678940294,
+    "n_param": "8333100",
+    "cfg": [
+      64,
+      64,
+      64
+    ],
+    "batchsize": 64,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-16-5-32.32.641": {
+    "train_acc": 0.9118813559322034,
+    "test_acc": 0.8874,
+    "distance_to_initialization": 22.41821716917216,
+    "n_param": "8286732",
+    "cfg": [
+      32,
+      32,
+      64
+    ],
+    "batchsize": 16,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-16-7-32.32.641": {
+    "train_acc": 0.9244915254237288,
+    "test_acc": 0.8965,
+    "distance_to_initialization": 26.53022239673099,
+    "n_param": "8286732",
+    "cfg": [
+      32,
+      32,
+      64
+    ],
+    "batchsize": 16,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-32-5-32.32.641": {
+    "train_acc": 0.9119152542372881,
+    "test_acc": 0.8866,
+    "distance_to_initialization": 22.486863769707462,
+    "n_param": "8286732",
+    "cfg": [
+      32,
+      32,
+      64
+    ],
+    "batchsize": 32,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-32-7-32.32.641": {
+    "train_acc": 0.923677966101695,
+    "test_acc": 0.8993,
+    "distance_to_initialization": 26.324240322640645,
+    "n_param": "8286732",
+    "cfg": [
+      32,
+      32,
+      64
+    ],
+    "batchsize": 32,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-64-5-32.32.641": {
+    "train_acc": 0.9134406779661017,
+    "test_acc": 0.8886,
+    "distance_to_initialization": 22.823217446013008,
+    "n_param": "8286732",
+    "cfg": [
+      32,
+      32,
+      64
+    ],
+    "batchsize": 64,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-64-7-32.32.641": {
+    "train_acc": 0.9247796610169492,
+    "test_acc": 0.8984,
+    "distance_to_initialization": 26.51679883247388,
+    "n_param": "8286732",
+    "cfg": [
+      32,
+      32,
+      64
+    ],
+    "batchsize": 64,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-16-5-32.32.321": {
+    "train_acc": 0.9074067796610169,
+    "test_acc": 0.8866,
+    "distance_to_initialization": 24.270513600485085,
+    "n_param": "4148748",
+    "cfg": [
+      32,
+      32,
+      32
+    ],
+    "batchsize": 16,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-16-7-32.32.321": {
+    "train_acc": 0.9142033898305085,
+    "test_acc": 0.8937,
+    "distance_to_initialization": 27.26331210024534,
+    "n_param": "4148748",
+    "cfg": [
+      32,
+      32,
+      32
+    ],
+    "batchsize": 16,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-32-5-32.32.321": {
+    "train_acc": 0.9072372881355932,
+    "test_acc": 0.8863,
+    "distance_to_initialization": 24.653237299097974,
+    "n_param": "4148748",
+    "cfg": [
+      32,
+      32,
+      32
+    ],
+    "batchsize": 32,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-32-7-32.32.321": {
+    "train_acc": 0.9165762711864407,
+    "test_acc": 0.8948,
+    "distance_to_initialization": 26.36503034106206,
+    "n_param": "4148748",
+    "cfg": [
+      32,
+      32,
+      32
+    ],
+    "batchsize": 32,
+    "epochs": 7,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-64-5-32.32.321": {
+    "train_acc": 0.9054745762711864,
+    "test_acc": 0.8871,
+    "distance_to_initialization": 23.795871098868368,
+    "n_param": "4148748",
+    "cfg": [
+      32,
+      32,
+      32
+    ],
+    "batchsize": 64,
+    "epochs": 5,
+    "dataset_name": "FASHION-MNIST"
+  },
+  "MNIST-64-7-32.32.321": {
+    "train_acc": 0.9153728813559322,
+    "test_acc": 0.8947,
+    "distance_to_initialization": 26.856472211894797,
+    "n_param": "4148748",
+    "cfg": [
+      32,
+      32,
+      32
+    ],
+    "batchsize": 64,
+    "epochs": 7,
     "dataset_name": "FASHION-MNIST"
   }
 }

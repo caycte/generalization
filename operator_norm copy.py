@@ -102,41 +102,6 @@ def clip_model_weights(model, inp_shape, clip_to=1):
                 layer.weight.data.copy_(clip_linear_layer(layer.weight.data, clip_to))
                 # Apply the function f to the parameter
  
-# def model_operator_norm_diff(model1,model2, inp_shape):
-#     """
-#     Apply a function to the weights of all layers in a PyTorch model.
-
-#     Parameters:
-#     model (nn.Module): The model whose weights will be modified.
-#     f (function): A function that takes a weight tensor as input and returns a modified weight tensor.
-#     """
-#     res = 0
-#     n_param = 0
-#     with torch.no_grad():
-#         for p1, p2, in zip(model1.named_parameters(),model2.named_parameters()):
-           
-#             if 'weight' in p1[0]:
-#                 # Get the layer from the name
-#                 layer_name = p1[0].split('.')[0]
-#                 print(layer_name)
-
-#                 # Check if the layer is a convolutional layer
-#                 if isinstance(getattr(model1, layer_name), nn.Conv2d) :
-
-#                     kernel = p1[1].data - p2[1].data
-#                     print(kernel)
-#                     break
-
-#                     res += singular_values(kernel,inp_shape)
-#                     n_param+=np.prod(kernel.shape)
-               
-                
-#                 if isinstance(getattr(model1, layer_name), nn.Linear) :
-#                     kernel = p1[1].data - p2[1].data
-#                     res += singular_values(kernel,kernel.shape[-2:])
-#                     n_param+=np.prod(kernel.shape)
-#     return res, n_param
-
 
 
 def metrics(model1,model2, input_shape):
